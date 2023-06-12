@@ -18,18 +18,16 @@ namespace PdfCombiner
 			Console.Title = nameof(PdfCombiner);
 			Console.CursorVisible = false;
 
-			if (IsTrue(args.Length == 0, "File not specifed.")) 
+			if (!IsTrue(args.Length == 0, "Throw a book(-s) at me.")) 
 			{ 
-				return; 
-			}
-
-			foreach (string arg in args)
-			{
-				var clock = Stopwatch.StartNew();
-				Prepare(arg);
-				clock.Stop();
-				Console.WriteLine($"Elapsed {clock.ElapsedMilliseconds} ms");
-				Console.WriteLine();
+				foreach (string arg in args)
+				{
+					var clock = Stopwatch.StartNew();
+					Prepare(arg);
+					clock.Stop();
+					Console.WriteLine($"Elapsed {clock.ElapsedMilliseconds} ms");
+					Console.WriteLine();
+				}
 			}
 
 			Console.WriteLine("Press Enter to exit...");
