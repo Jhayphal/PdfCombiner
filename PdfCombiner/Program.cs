@@ -32,7 +32,7 @@ namespace PdfCombiner
 				Console.WriteLine();
 			}
 
-			Console.WriteLine("Press Enter for exit");
+			Console.WriteLine("Press Enter to exit...");
 			Console.ReadLine();
 		}
 
