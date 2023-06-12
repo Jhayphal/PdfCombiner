@@ -126,9 +126,10 @@ namespace PdfCombiner
 		{
 			if (condition)
 			{
+				var prevColor = Console.ForegroundColor;
 				Console.ForegroundColor = ConsoleColor.Red;
 				Console.WriteLine(message);
-				Console.ReadLine();
+				Console.ForegroundColor = prevColor;
 			}
 
 			return condition;
