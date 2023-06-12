@@ -33,7 +33,7 @@ namespace PdfCombiner
 			}
 
 			Console.WriteLine("Press Enter for exit");
-            Console.ReadLine();
+			Console.ReadLine();
 		}
 
 		private static void Prepare(string fileName)
@@ -117,9 +117,9 @@ namespace PdfCombiner
 			var output = Path.Combine(path, $"{fileName}_prepared{extension}");
 			destination.Save(output);
 
-            Console.WriteLine($"Saved to '{output}'");
+			Console.WriteLine($"Saved to '{output}'");
 
-            Process.Start(output);
+			Process.Start(output);
 		}
 
 		private static bool IsTrue(bool condition, string message)
